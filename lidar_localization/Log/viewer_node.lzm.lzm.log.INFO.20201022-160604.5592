@@ -1,0 +1,6 @@
+Log file created at: 2020/10/22 16:06:04
+Running on machine: lzm
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1022 16:06:04.481187  5592 viewer.cpp:212] 地图保存完成，地址是：
+/home/lzm/Research/shenlan/MSF/ros_ws/src/chapter_2/lidar_localization/slam_data/map
+

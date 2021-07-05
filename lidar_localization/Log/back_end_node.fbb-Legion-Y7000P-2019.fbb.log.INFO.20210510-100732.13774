@@ -1,0 +1,10 @@
+Log file created at: 2021/05/10 10:07:32
+Running on machine: fbb-Legion-Y7000P-2019
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0510 10:07:32.438591 13774 g2o_graph_optimizer.cpp:47] 
+------ 完成第 1 次后端优化 -------
+顶点数：1054, 边数： 1089
+迭代次数： 29/512
+用时：0.157564
+优化前后误差变化：278.537--->0.064531
+

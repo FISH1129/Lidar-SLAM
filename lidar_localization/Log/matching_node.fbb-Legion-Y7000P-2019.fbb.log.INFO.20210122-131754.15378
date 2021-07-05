@@ -1,0 +1,15 @@
+Log file created at: 2021/01/22 13:17:54
+Running on machine: fbb-Legion-Y7000P-2019
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0122 13:17:54.937628 15378 matching.cpp:156] load global map size:1646532
+I0122 13:17:55.076532 15378 matching.cpp:159] filtered global map size:1639087
+I0122 13:17:55.166339 15378 matching.cpp:178] new local map:-100,100,-100,100,-100,100
+
+I0122 13:18:44.297608 15378 matching.cpp:178] new local map:-100.511,99.4891,-101.745,98.255,-99.216,100.784
+
+I0122 13:18:50.343418 15378 matching.cpp:178] new local map:-74.8674,125.133,-51.5414,148.459,-99.027,100.973
+
+I0122 13:19:01.347283 15378 matching.cpp:178] new local map:-24.7474,175.253,-53.9301,146.07,-99.0945,100.906
+
+I0122 13:19:11.838131 15378 matching.cpp:178] new local map:25.4932,225.493,-24.8913,175.109,-98.7677,101.232
+

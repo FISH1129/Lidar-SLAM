@@ -1,0 +1,17 @@
+Log file created at: 2020/10/24 10:16:21
+Running on machine: lzm-Legion-Y7000P-2019
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1024 10:16:21.154124  3086 g2o_graph_optimizer.cpp:46] 
+------ 完成第 1 次后端优化 -------
+顶点数：950, 边数： 1906
+迭代次数： 17/512
+用时：0.0900557
+优化前后误差变化：134750--->7.40296
+
+I1024 10:20:07.452803  3086 g2o_graph_optimizer.cpp:46] 
+------ 完成第 2 次后端优化 -------
+顶点数：1900, 边数： 3846
+迭代次数： 14/512
+用时：0.199969
+优化前后误差变化：310286--->28.5789
+

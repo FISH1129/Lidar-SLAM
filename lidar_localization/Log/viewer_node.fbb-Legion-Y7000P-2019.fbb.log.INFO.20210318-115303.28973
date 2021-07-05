@@ -1,0 +1,6 @@
+Log file created at: 2021/03/18 11:53:03
+Running on machine: fbb-Legion-Y7000P-2019
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0318 11:53:03.942546 28973 viewer.cpp:212] 地图保存完成，地址是：
+/home/fbb/SLAM/shenlanlaserhk/rq-localization/chapter_2/LZM2_ws/src/lidar_localization/slam_data/map
+
