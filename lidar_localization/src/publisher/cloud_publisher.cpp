@@ -1,7 +1,5 @@
 /*
  * @Description: 通过ros发布点云
- * @Author: Ren Qian
- * @Date: 2020-02-05 02:27:30
  */
 
 #include "lidar_localization/publisher/cloud_publisher.hpp"
@@ -38,4 +36,4 @@ void CloudPublisher::PublishData(CloudData::CLOUD_PTR&  cloud_ptr_input, ros::Ti
 bool CloudPublisher::HasSubscribers() {
     return publisher_.getNumSubscribers() != 0;
 }
-} // namespace lidar_localization
+}

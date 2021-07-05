@@ -1,5 +1,5 @@
 # 匹配
-registration_method: NDT   # 选择点云匹配方法，目前支持：NDT 
+registration_method: NDTMANUAL   # 选择点云匹配方法，目前支持：NDT ICP NDTMANUAL ICPMANUAL  
 
 
 # 当前帧
@@ -20,9 +20,28 @@ NDT:
     step_size : 0.1
     trans_eps : 0.01
     max_iter : 30
+
+NDTMANUAL:
+    res : 1.0
+    step_size : 0.1
+    trans_eps : 0.01
+    max_iter : 30
+    outlier_ratio : 0.55
+
+ICP:
+    euclid_eps : 0.01
+    max_correspond_dis : 2
+    trans_eps : 0.01
+    max_iter : 30
+
+ICPMANUAL:
+    max_correspond_dis : 2
+    max_iter : 30
+    
 ## 滤波相关参数
+## 格子越小，点越多，精度越高，但是速度越慢
 voxel_filter:
     local_map:
-        leaf_size: [0.4, 0.4, 0.4]#原来是0.6
+        leaf_size: [0.3, 0.3, 0.3] #原来是0.6    0.4
     frame:
-        leaf_size: [0.6, 0.6, 0.6]#原来是1.3
+        leaf_size: [0.5, 0.5, 0.5] #原来是1.3    0.6

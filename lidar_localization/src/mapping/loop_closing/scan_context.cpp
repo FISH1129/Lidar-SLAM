@@ -1,9 +1,3 @@
-/*
-* 运行中会发现, scan context 算法很容易就会找到闭环,甚至会出现错误的闭环,所以需要加入
-* 一些距离限制,代码里使用 激光里程计的位置信息 来做判断,只有在一定范围内的闭环才认为是有效
-* 的,并且没有使用 SC 算出来的 yaw 角,直接使用 NDT 算法进行匹配
-*/
-
 #include "lidar_localization/mapping/loop_closing/scan_context.h"
 
 namespace lidar_localization
@@ -25,16 +19,16 @@ float deg2rad(float degrees)
 
 float xy2theta(const float& _x, const float& _y)
 {
-  if (_x >= 0 & _y >= 0)
+  if ((_x >= 0) & (_y >= 0))
     return (180 / M_PI) * atan(_y / _x);
 
-  if (_x < 0 & _y >= 0)
+  if ((_x < 0) & (_y >= 0))
     return 180 - ((180 / M_PI) * atan(_y / (-_x)));
 
-  if (_x < 0 & _y < 0)
+  if ((_x < 0) & (_y < 0))
     return 180 + ((180 / M_PI) * atan(_y / _x));
 
-  if (_x >= 0 & _y < 0)
+  if ((_x >= 0) & (_y < 0))
     return 360 - ((180 / M_PI) * atan((-_y) / _x));
 }  // xy2theta
 
@@ -75,7 +69,7 @@ double SCManager::distDirectSC(MatrixXd& _sc1, MatrixXd& _sc2)
     VectorXd col_sc1 = _sc1.col(col_idx);
     VectorXd col_sc2 = _sc2.col(col_idx);
 
-    if (col_sc1.norm() == 0 | col_sc2.norm() == 0)
+    if ((col_sc1.norm() == 0) | (col_sc2.norm() == 0))
       continue;  // don't count this sector pair.
 
     double sector_similarity = col_sc1.dot(col_sc2) / (col_sc1.norm() * col_sc2.norm());
@@ -258,7 +252,7 @@ std::pair<int, float> SCManager::detectLoopClosureID(void)
 {
   int loop_id{ -1 };  // init with -1, -1 means no loop (== LeGO-LOAM's variable "closestHistoryFrameID")
 
-  auto curr_key = polarcontext_invkeys_mat_.back();  // current observation (query)
+  auto curr_key  = polarcontext_invkeys_mat_.back();  // current observation (query)
   auto curr_desc = polarcontexts_.back();            // current observation (query)
 
   /*

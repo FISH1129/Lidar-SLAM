@@ -1,6 +1,0 @@
-Log file created at: 2021/05/10 10:08:15
-Running on machine: fbb-Legion-Y7000P-2019
-Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
-I0510 10:08:15.498541 13776 viewer.cpp:212] 地图保存完成，地址是：
-/home/fbb/SLAM/myslam/MNDT_ground_cluster_4.1_ws/src/lidar_localization/slam_data/map
-

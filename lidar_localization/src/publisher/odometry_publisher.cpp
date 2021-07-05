@@ -1,7 +1,6 @@
+#include <utility>
 /*
  * @Description: 里程计信息发布
- * @Author: Ren Qian
- * @Date: 2020-02-06 21:11:44
  */
 #include "lidar_localization/publisher/odometry_publisher.hpp"
 
@@ -11,9 +10,9 @@ OdometryPublisher::OdometryPublisher(ros::NodeHandle& nh, std::string topic_name
                                      std::string child_frame_id, int buff_size)
   : nh_(nh)
 {
-  publisher_ = nh_.advertise<nav_msgs::Odometry>(topic_name, buff_size);
-  odometry_.header.frame_id = base_frame_id;
-  odometry_.child_frame_id = child_frame_id;
+  publisher_ = nh_.advertise<nav_msgs::Odometry>(topic_name, static_cast<uint32_t>(buff_size));
+  odometry_.header.frame_id = std::move(base_frame_id);
+  odometry_.child_frame_id = std::move(child_frame_id);
 }
 
 void OdometryPublisher::Publish(const Eigen::Matrix4f& transform_matrix, double time)

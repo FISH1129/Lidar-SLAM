@@ -21,7 +21,7 @@ void CloudSubscriber::msg_callback(const sensor_msgs::PointCloud2::ConstPtr& clo
     pcl::fromROSMsg(*cloud_msg_ptr, *(cloud_data.cloud_ptr));
 
     std::cout << "订阅处原始帧" << cloud_data.cloud_ptr->points.size() <<std::endl;
-    
+
     new_cloud_data_.push_back(cloud_data);
     buff_mutex_.unlock();
 }

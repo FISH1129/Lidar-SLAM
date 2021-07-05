@@ -137,7 +137,7 @@ bool LoopClosing::Update(const KeyFrame key_frame, const KeyFrame key_gnss)
     cv::imwrite(key_frame_scan_context.c_str(), sc_manager_->scan_context_img_);
 
     int key_frame_index = 0;
-    if (!DetectNearestKeyFrameScanContext(key_frame_index)) //用来检测最近的关键帧
+    if (!DetectNearestKeyFrameScanContext(key_frame_index))
       return false;
 
     if (!CloudRegistration(key_frame_index))

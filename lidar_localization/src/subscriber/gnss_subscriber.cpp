@@ -29,6 +29,7 @@ void GNSSSubscriber::msg_callback(const sensor_msgs::NavSatFixConstPtr& nav_sat_
   buff_mutex_.unlock();
 }
 
+//数据读入gnss_data_buff容器
 void GNSSSubscriber::ParseData(std::deque<GNSSData>& gnss_data_buff)
 {
   buff_mutex_.lock();

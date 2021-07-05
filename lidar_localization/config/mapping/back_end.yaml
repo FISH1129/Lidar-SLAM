@@ -6,12 +6,12 @@ key_frame_distance: 2.0 # 关键帧距离
 # 优化
 graph_optimizer_type: g2o # 图优化库，目前支持g2o
 
-use_gnss: false  #true
+use_gnss: false
 use_loop_close: true
 
-optimize_step_with_key_frame: 10000 # 没有其他信息时，每隔 step 发送一次优化的位姿
-optimize_step_with_gnss: 950 # 每累计 step 个 gnss 观测时，优化一次
-optimize_step_with_loop: 100  # 每累计 step 个闭环约束时优化一次
+optimize_step_with_key_frame: 10000 # 当新到关键帧计数达到这个值时做一次优化   原来：10000
+optimize_step_with_gnss: 950 # 当新产生的gnss观测技术达到这个值时做一次优化    原来是:950
+optimize_step_with_loop: 100  # 当新得到闭环检测边的计数达到这个值时做一次优化
 
 g2o_param:
     odom_edge_noise: [0.5, 0.5, 0.5, 0.001, 0.001, 0.001] # 噪声：x y z yaw roll pitch

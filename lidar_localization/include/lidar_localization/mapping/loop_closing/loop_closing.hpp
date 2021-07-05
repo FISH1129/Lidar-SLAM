@@ -15,7 +15,9 @@
 #include "lidar_localization/sensor_data/loop_pose.hpp"
 #include "lidar_localization/models/registration/registration_interface.hpp"
 #include "lidar_localization/models/cloud_filter/cloud_filter_interface.hpp"
+
 #include "lidar_localization/mapping/loop_closing/scan_context.h"
+
 #include <fstream>
 
 namespace lidar_localization

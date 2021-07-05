@@ -16,10 +16,10 @@ class RegistrationInterface {
     virtual ~RegistrationInterface() = default;
 
     virtual bool SetInputTarget(const CloudData::CLOUD_PTR& input_target) = 0;
-    virtual bool ScanMatch(const CloudData::CLOUD_PTR& input_source, 
-                          const Eigen::Matrix4f& predict_pose, 
-                          CloudData::CLOUD_PTR& result_cloud_ptr,
-                          Eigen::Matrix4f& result_pose) = 0;
+    virtual bool ScanMatch(const CloudData::CLOUD_PTR& input_source,
+                           const Eigen::Matrix4f& predict_pose, 
+                           CloudData::CLOUD_PTR& result_cloud_ptr,
+                           Eigen::Matrix4f& result_pose) = 0;
     virtual float GetFitnessScore() = 0;
 };
 } 

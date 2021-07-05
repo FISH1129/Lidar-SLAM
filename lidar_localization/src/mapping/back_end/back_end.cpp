@@ -234,7 +234,8 @@ bool BackEnd::AddNodeAndEdge(const PoseData &gnss_data)
   // 添加gnss位置对应的先验边
   if (graph_optimizer_config_.use_gnss)
   {
-    Eigen::Vector3d xyz(static_cast<double>(gnss_data.pose(0, 3)), static_cast<double>(gnss_data.pose(1, 3)),
+    Eigen::Vector3d xyz(static_cast<double>(gnss_data.pose(0, 3)), 
+                        static_cast<double>(gnss_data.pose(1, 3)),
                         static_cast<double>(gnss_data.pose(2, 3)));
     graph_optimizer_ptr_->AddSe3PriorXYZEdge(node_num - 1, xyz, graph_optimizer_config_.gnss_noise);
     new_gnss_cnt_++;

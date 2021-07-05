@@ -62,12 +62,20 @@ public:
   bool GetOptimizedPose(std::deque<Eigen::Matrix4f>& optimized_pose) override;
   int GetNodeNum() override;
   // 添加节点、边、鲁棒核
-  void SetEdgeRobustKernel(std::string robust_kernel_name, double robust_kernel_size) override;
-  void AddSe3Node(const Eigen::Isometry3d& pose, bool need_fix) override;
-  void AddSe3Edge(int vertex_index1, int vertex_index2, const Eigen::Isometry3d& relative_pose,
+  void SetEdgeRobustKernel(std::string robust_kernel_name, 
+                           double robust_kernel_size) override;
+  void AddSe3Node(const Eigen::Isometry3d& pose, 
+                  bool need_fix) override;
+  void AddSe3Edge(int vertex_index1, 
+                  int vertex_index2, 
+                  const Eigen::Isometry3d& relative_pose,
                   const Eigen::VectorXd noise) override;
-  void AddSe3PriorXYZEdge(int se3_vertex_index, const Eigen::Vector3d& xyz, Eigen::VectorXd noise) override;
-  void AddSe3PriorQuaternionEdge(int se3_vertex_index, const Eigen::Quaterniond& quat, Eigen::VectorXd noise) override;
+  void AddSe3PriorXYZEdge(int se3_vertex_index, 
+                          const Eigen::Vector3d& xyz, 
+                          Eigen::VectorXd noise) override;
+  void AddSe3PriorQuaternionEdge(int se3_vertex_index, 
+                                 const Eigen::Quaterniond& quat, 
+                                 Eigen::VectorXd noise) override;
 
 private:
   Eigen::MatrixXd CalculateSe3EdgeInformationMatrix(Eigen::VectorXd noise);

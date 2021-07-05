@@ -1,7 +1,7 @@
 /*
- * @Description: viewer 的 node 文件
- * @Author: Ren Qian
- * @Date: 2020-02-05 02:56:27
+ * @Description:
+ * 1、接收优化后的位姿，并根据这个位姿生成全局地图
+ * 2、接收当前帧点云和位姿，按优化后的位姿投影并发送。
  */
 #include <ros/ros.h>
 #include "glog/logging.h"
@@ -32,6 +32,7 @@ int main(int argc, char* argv[])
   ros::NodeHandle nh;
 
   std::string cloud_topic;
+  //nh.param<std::string>("cloud_topic", cloud_topic, "/points_noground_synced");
   nh.param<std::string>("cloud_topic", cloud_topic, "/synced_cloud");
   std::shared_ptr<ViewerFlow> _viewer_flow_ptr = std::make_shared<ViewerFlow>(nh, cloud_topic);
 

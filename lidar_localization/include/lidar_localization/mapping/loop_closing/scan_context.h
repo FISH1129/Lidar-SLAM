@@ -28,6 +28,8 @@
 
 #include "lidar_localization/mapping/loop_closing/tictoc.h"
 
+#include "lidar_localization/sensor_data/cloud_data.hpp"
+
 using namespace Eigen;
 using namespace nanoflann;
 
@@ -39,9 +41,10 @@ using std::atan2;
 using std::cos;
 using std::sin;
 
-using SCPointType = pcl::PointXYZ; // using xyz only. but a user can exchange the original bin encoding function
+using SCPointType = pcl::PointXYZI; // using xyz only. but a user can exchange the original bin encoding function
                                    // (i.e., max hegiht) to max intensity (for detail, refer 20 ICRA Intensity Scan
                                    // Context)
+//using SCPointType =VelodynePointXYZILW;
 using KeyMat = std::vector<std::vector<float>>;
 using InvKeyTree = KDTreeVectorOfVectorsAdaptor<KeyMat, float>;
 
@@ -86,7 +89,7 @@ public:
   const double PC_UNIT_RINGGAP = PC_MAX_RADIUS / double(PC_NUM_RING);
 
   // tree
-  const int NUM_EXCLUDE_RECENT = 50;       // simply just keyframe gap, but node position distance-based exclusion is ok.
+  const unsigned int NUM_EXCLUDE_RECENT = 50;       // simply just keyframe gap, but node position distance-based exclusion is ok.
   const int NUM_CANDIDATES_FROM_TREE = 10; // 10 is enough. (refer the IROS 18 paper)
 
   // loop thres

@@ -1,0 +1,6 @@
+Log file created at: 2021/01/16 10:50:17
+Running on machine: fbb-Legion-Y7000P-2019
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0116 10:50:17.276368  8499 ndt_registration_manual.cpp:37] NDT Manual 的匹配参数为：
+res: 4, step_size: 0.15, trans_eps: 0.01, max_iter: 20, outlier_ratio: 0.6
+

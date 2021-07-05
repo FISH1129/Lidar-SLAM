@@ -10,14 +10,17 @@
 
 #include "lidar_localization/subscriber/cloud_subscriber.hpp"
 #include "lidar_localization/publisher/odometry_publisher.hpp"
+#include <jsk_recognition_msgs/BoundingBox.h>
+#include <jsk_recognition_msgs/BoundingBoxArray.h>
 #include "lidar_localization/mapping/front_end/front_end.hpp"
 
-#include "lidar_localization/publisher/cloud_publisher.hpp"
+#include "lidar_localization/models/registration/ndt_registration_manual/NormalDistributionsTransform.h"
+#include <chrono>
 
 namespace lidar_localization {
 class FrontEndFlow {
   public:
-    FrontEndFlow(ros::NodeHandle& nh, std::string cloud_topic, std::string odom_topic, std::string no_object_cloud_topic);
+    FrontEndFlow(ros::NodeHandle& nh, std::string cloud_topic, std::string odom_topic);
 
     bool Run();
 
@@ -31,13 +34,11 @@ class FrontEndFlow {
   private:
     std::shared_ptr<CloudSubscriber> cloud_sub_ptr_;
     std::shared_ptr<OdometryPublisher> laser_odom_pub_ptr_;
-    std::shared_ptr<CloudPublisher> no_object_cloud_pub_ptr_;
     std::shared_ptr<FrontEnd> front_end_ptr_;
+    ros::Publisher pub_bounding_boxs_;
 
     std::deque<CloudData> cloud_data_buff_;
-
     CloudData current_cloud_data_;
-
     Eigen::Matrix4f laser_odometry_ = Eigen::Matrix4f::Identity();
 };
 }

@@ -1,5 +1,9 @@
 /*
  * @Description: 
+ * @Author: Ren Qian
+ * @Date: 2020-02-05 02:56:27
+ * 订阅GNSS、IMU、lidar信息，然后把GNSS信息中的位置、IMU信息中的姿态信息解析出来，然后用odometry发布出去，
+ * 把订阅的点云信息按照解析的 位姿数据 转换到当前车的位置和方向上去，再发布出去。
  */
 #include <ros/ros.h>
 #include <pcl/common/transforms.h>
