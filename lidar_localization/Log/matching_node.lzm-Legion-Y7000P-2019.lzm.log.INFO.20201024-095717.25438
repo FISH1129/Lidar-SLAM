@@ -1,0 +1,7 @@
+Log file created at: 2020/10/24 09:57:17
+Running on machine: lzm-Legion-Y7000P-2019
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1024 09:57:17.928685 25438 matching.cpp:103] load global map size:0
+I1024 09:57:17.928838 25438 matching.cpp:106] filtered global map size:0
+I1024 09:57:17.928864 25438 matching.cpp:124] new local map:-150,150,-150,150,-150,150
+

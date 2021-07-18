@@ -1,0 +1,17 @@
+Log file created at: 2020/10/23 11:26:25
+Running on machine: lzm
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1023 11:26:25.813513 30282 matching.cpp:87] load global map size:1646532
+I1023 11:26:25.990168 30282 matching.cpp:90] filtered global map size:1639087
+I1023 11:26:26.216701 30282 matching.cpp:107] new local map:-150,150,-150,150,-150,150
+
+I1023 11:26:42.266443 30282 matching.cpp:107] new local map:-149.309,150.691,-149.45,150.55,-149.216,150.784
+
+I1023 11:27:05.610920 30282 matching.cpp:107] new local map:-48.9546,251.045,-100.429,199.571,-148.872,151.128
+
+I1023 11:27:21.929636 30282 matching.cpp:107] new local map:21.236,321.236,-0.101257,299.899,-148.951,151.049
+
+I1023 11:27:48.258335 30282 matching.cpp:107] new local map:-19.366,280.634,100.671,400.671,-149.685,150.315
+
+I1023 11:28:05.968921 30282 matching.cpp:107] new local map:-38.1604,261.84,200.88,500.88,-149.788,150.212
+

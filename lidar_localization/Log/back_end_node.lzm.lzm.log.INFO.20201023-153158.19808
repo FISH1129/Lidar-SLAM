@@ -1,0 +1,17 @@
+Log file created at: 2020/10/23 15:31:58
+Running on machine: lzm
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1023 15:31:58.861343 19808 g2o_graph_optimizer.cpp:46] 
+------ 完成第 1 次后端优化 -------
+顶点数：950, 边数： 1906
+迭代次数： 13/512
+用时：0.148931
+优化前后误差变化：203988--->7.26371
+
+I1023 15:37:55.187918 19808 g2o_graph_optimizer.cpp:46] 
+------ 完成第 2 次后端优化 -------
+顶点数：1900, 边数： 3845
+迭代次数： 17/512
+用时：0.53268
+优化前后误差变化：307795--->26.1496
+

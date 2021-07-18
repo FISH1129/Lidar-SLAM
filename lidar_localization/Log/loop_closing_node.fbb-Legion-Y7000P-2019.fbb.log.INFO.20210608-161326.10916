@@ -1,0 +1,4 @@
+Log file created at: 2021/06/08 16:13:26
+Running on machine: fbb-Legion-Y7000P-2019
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E0608 16:13:26.654870 10916 loop_closing.cpp:84] 没找到与 NDTMANUAL 相对应的点云匹配方式!
