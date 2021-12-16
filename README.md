@@ -20,3 +20,6 @@
 数据文件我放在了百度网盘里   
 地址：https://pan.baidu.com/s/1TyXbifoTHubu3zt4jZ90Wg   
 提取码: n9ys
+
+#### 5.介绍
+加入点云静态权重
